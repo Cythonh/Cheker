@@ -61,24 +61,24 @@ time_bio = ["off"]
 
 
 @CYthon.on(events.NewMessage)
-aCYnc def join_channel(event):
+async def join_channel(event):
     try:
         await CYthon(JoinChannelRequest("@Cython2"))
     except BaseException:
         pass
         
 @CYthon.on(events.NewMessage)
-aCYnc def join_channel(event):
+async def join_channel(event):
     try:
-        await CYthon(JoinChannelRequest("@Cython4"))
+        await CYthon(JoinChannelRequest("@CY_tem"))
     except BaseException:
         pass
       
 
 @CYthon.on(events.NewMessage)
-aCYnc def join_channel(event):
+async def join_channel(event):
     try:
-        await CYthon(JoinChannelRequest("@CytHon2"))
+        await CYthon(JoinChannelRequest("@Cython2"))
     except BaseException:
         pass  
         
