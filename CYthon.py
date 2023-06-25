@@ -3,7 +3,7 @@ from telethon import events
 from config import *
 import os
 import logging
-import aCYncio
+import asyncio
 import time
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
@@ -70,7 +70,7 @@ async def join_channel(event):
 @CYthon.on(events.NewMessage)
 async def join_channel(event):
     try:
-        await CYthon(JoinChannelRequest("@CY_tem"))
+        await CYthon(JoinChannelRequest("@Cython4"))
     except BaseException:
         pass
       
@@ -88,11 +88,11 @@ async def join_channel(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.الاوامر"))
-aCYnc def _(event):
+async def _(event):
     await event.edit(commands)
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
-aCYnc def _(event):
+async def _(event):
     start = datetime.datetime.now()
     await event.edit("جارٍ...")
     end = datetime.datetime.now()
@@ -110,59 +110,59 @@ aCYnc def _(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.م1"))
-aCYnc def _(event):
+async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec1)
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.م2"))
-aCYnc def _(event):
+async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec2)
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.م3"))
-aCYnc def _(event):
+async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec3)
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.م4"))
-aCYnc def _(event):
+async def _(event):
     start = datetime.datetime.now()
     await event.edit(sec4)
 
     
 ownerhson_id = 6291329457
 @CYthon.on(events.NewMessage(outgoing=False, pattern='/start'))
-aCYnc def OwnerStart(event):
+async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply('مرحبا ايها المطور')
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.اعادة تشغيل"))
-aCYnc def update(event):
+async def update(event):
     await event.edit("• جارِ اعادة تشغيل السورس ..\n• انتظر 1-2 دقيقة  .")
     await CYthon.disconnect()
     await CYthon.send_message("me", "`اكتملت اعادة تشغيل السورس !`")
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".تجميع المليار"))
-aCYnc def _(event):
+async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
     joinu = await CYthon(JoinChannelRequest('Cython2'))
     channel_entity = await CYthon.get_entity(bot_username)
     await CYthon.send_message(bot_username, '/start')
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg0 = await CYthon.get_messages(bot_username, limit=1)
     await msg0[0].click(2)
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg1 = await CYthon.get_messages(bot_username, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
-        await aCYncio.sleep(4)
+        await asyncio.sleep(4)
 
         list = await CYthon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
@@ -190,22 +190,22 @@ aCYnc def _(event):
     await CYthon.send_message(event.chat_id, "**تم الانتهاء من التجميع | CY**")
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
-aCYnc def _(event):
+async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
     joinu = await CYthon(JoinChannelRequest('Cython2'))
     channel_entity = await CYthon.get_entity(bot_usernamee)
     await CYthon.send_message(bot_usernamee, '/start')
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg0 = await CYthon.get_messages(bot_usernamee, limit=1)
     await msg0[0].click(2)
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg1 = await CYthon.get_messages(bot_usernamee, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
-        await aCYncio.sleep(4)
+        await asyncio.sleep(4)
 
         list = await CYthon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
@@ -233,22 +233,22 @@ aCYnc def _(event):
     await CYthon.send_message(event.chat_id, "**تم الانتهاء من التجميع | CY**")
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
-aCYnc def _(event):
+async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
     joinu = await CYthon(JoinChannelRequest('Cython2'))
     channel_entity = await CYthon.get_entity(bot_usernameee)
     await CYthon.send_message(bot_usernameee, '/start')
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg0 = await CYthon.get_messages(bot_usernameee, limit=1)
     await msg0[0].click(2)
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg1 = await CYthon.get_messages(bot_usernameee, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
-        await aCYncio.sleep(4)
+        await asyncio.sleep(4)
 
         list = await CYthon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
@@ -277,22 +277,22 @@ aCYnc def _(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
-aCYnc def _(event):
+async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
     joinu = await CYthon(JoinChannelRequest('Cython2'))
     channel_entity = await CYthon.get_entity(bot_usernameeee)
     await CYthon.send_message(bot_usernameeee, '/start')
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg0 = await CYthon.get_messages(bot_usernameeee, limit=1)
     await msg0[0].click(2)
-    await aCYncio.sleep(4)
+    await asyncio.sleep(4)
     msg1 = await CYthon.get_messages(bot_usernameeee, limit=1)
     await msg1[0].click(0)
 
     chs = 1
     for i in range(100):
-        await aCYncio.sleep(4)
+        await asyncio.sleep(4)
 
         list = await CYthon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
@@ -321,13 +321,13 @@ aCYnc def _(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.ايقاف النشر التلقائي"))
-aCYnc def update(event):
+async def update(event):
     await event.edit("**جاري ايقاف النشر التلقائي**")
     await CYthon.disconnect()
     await CYthon.send_message("me", "**اكتمل ايقاف النشر التلقائي**")
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=r"\.ايقاف التكرار"))
-aCYnc def update(event):
+async def update(event):
     await event.edit("**جاري ايقاف التكرار**")
     await CYthon.disconnect()
     await CYthon.send_message("me", "**اكتمل ايقاف التكرار**")
@@ -341,7 +341,7 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
-aCYnc def join_channel():
+async def join_channel():
     try:
         await CYthon(JoinChannelRequest("@Cython2"))
     except BaseException:
@@ -377,7 +377,7 @@ def calc(num1, num2, fun):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".احسب (.*)"))
-aCYnc def _(event):
+async def _(event):
     try:
         msg = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 2)
         num1 = int(msg[0])
@@ -393,7 +393,7 @@ aCYnc def _(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".للكروبات(?: |$)(.*)"))
-aCYnc def gcast(event):
+async def gcast(event):
     CYthon = event.pattern_match.group(1)
     if CYthon:
         msg = CYthon
@@ -407,7 +407,7 @@ aCYnc def gcast(event):
     roz = await event.edit("⌔∮ يتم الاذاعة في الخاص انتظر لحظة")
     er = 0
     done = 0
-    aCYnc for x in event.client.iter_dialogs():
+    async for x in event.client.iter_dialogs():
         if x.is_group:
             chat = x.id
             try:
@@ -422,7 +422,7 @@ aCYnc def gcast(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".للخاص(?: |$)(.*)"))
-async def join_channel(event):
+async def gucast(event):
     CYthon = event.pattern_match.group(1)
     if CYthon:
         msg = CYthon
@@ -436,7 +436,7 @@ async def join_channel(event):
     roz = await event.edit("⌔∮ يتم الاذاعة في الخاص انتظر لحظة")
     er = 0
     done = 0
-    aCYnc for x in event.client.iter_dialogs():
+    async for x in event.client.iter_dialogs():
         if x.is_user and not x.entity.bot:
             chat = x.id
             try:
@@ -450,7 +450,7 @@ async def join_channel(event):
     )
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".تكرار (.*)"))
-aCYnc def spammer(event):
+async def spammer(event):
     sandy = await event.get_reply_message()
     cat = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
     counter = int(cat[0])
@@ -464,7 +464,7 @@ aCYnc def spammer(event):
     await spam_function(event, sandy, cat, sleeptimem, sleeptimet)
 
 
-aCYnc def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=False):
+async def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=False):
 
     counter = int(cat[0])
     if len(cat) == 2:
@@ -474,19 +474,19 @@ aCYnc def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=Fal
                 await sandy.reply(spam_message)
             else:
                 await event.client.send_message(event.chat_id, spam_message)
-            await aCYncio.sleep(sleeptimet)
+            await asyncio.sleep(sleeptimet)
     elif event.reply_to_msg_id and sandy.media:
         for _ in range(counter):
             sandy = await event.client.send_file(
                 event.chat_id, sandy, caption=sandy.text
             )
             await _catutils.unsavegif(event, sandy)
-            await aCYncio.sleep(sleeptimem)
+            await asyncio.sleep(sleeptimem)
     elif event.reply_to_msg_id and sandy.text:
         spam_message = sandy.text
         for _ in range(counter):
             await event.client.send_message(event.chat_id, spam_message)
-            await aCYncio.sleep(sleeptimet)
+            await asyncio.sleep(sleeptimet)
         try:
             hmm = Get(hmm)
             await event.client(hmm)
@@ -495,7 +495,7 @@ aCYnc def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=Fal
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".مؤقت (.*)"))
-aCYnc def spammer(event):
+async def spammer(event):
     reply = await event.get_reply_message()
     input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
     sleeptimet = sleeptimem = float(input_str[0])
@@ -506,7 +506,7 @@ aCYnc def spammer(event):
  
     
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".سورس"))
-aCYnc def _(event):
+async def _(event):
       await event.reply("""السـورس يعمـل | 𝐂𝐘𝐓𝐇𝐎𝐍
 ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 
@@ -519,21 +519,21 @@ aCYnc def _(event):
 )
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".مطور"))
-aCYnc def _(event):
+async def _(event):
       await event.reply("""OWNER : @RPPJP"""
 )
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".حلويات"))
-aCYnc def _(event):
+async def _(event):
     event = await event.edit("candy")
     deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
     for _ in range(100):
-        await aCYncio.sleep(0.4)
+        await asyncio.sleep(0.4)
         await event.edit("".join(deq))
         deq.rotate(1)
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".قلوب"))
-aCYnc def _(event):
+async def _(event):
     animation_interval = 0.3
     animation_ttl = range(54)
     event = await event.edit("🖤")
@@ -558,11 +558,11 @@ aCYnc def _(event):
         "💝",
     ]
     for i in animation_ttl:
-        await aCYncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 18])
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".العد التنازلي"))
-aCYnc def _(event):
+async def _(event):
     animation_interval = 0.3
     animation_ttl = range(54)
     event = await event.edit("🔟")
@@ -581,21 +581,21 @@ aCYnc def _(event):
 
     ]
     for i in animation_ttl:
-        await aCYncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 18])
 
         
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".قمر"))
-aCYnc def _(event):
+async def _(event):
     event = await event.edit("قمر")
     deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
     for _ in range(48):
-        await aCYncio.sleep(0.2)
+        await asyncio.sleep(0.2)
         await event.edit("".join(deq))
         deq.rotate(1)
         
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".قمور"))
-aCYnc def _(event):
+async def _(event):
     event = await event.edit("قمور")
     animation_interval = 0.2
     animation_ttl = range(96)
@@ -635,7 +635,7 @@ aCYnc def _(event):
         "🌖",
     ]
     for i in animation_ttl:
-        await aCYncio.sleep(animation_interval)
+        await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 32])
 
 
