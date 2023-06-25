@@ -1,4 +1,4 @@
 
-### تابع : [SYTHON](https://t.me/SAYTHONH) ###
+### تابع : [Cython](https://t.me/Cython2) ###
 
-![SYTHON](https://te.legra.ph/file/80ff0951e619289e99c79.jpg)
+![Cython](https://te.legra.ph/file/b1486b098dfd61bff6277.jpg)
