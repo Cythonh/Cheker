@@ -422,7 +422,7 @@ aCYnc def gcast(event):
 
 
 @CYthon.on(events.NewMessage(outgoing=True, pattern=".للخاص(?: |$)(.*)"))
-aCYnc def gucast(event):
+async def join_channel(event):
     CYthon = event.pattern_match.group(1)
     if CYthon:
         msg = CYthon
