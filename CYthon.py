@@ -70,7 +70,7 @@ aCYnc def join_channel(event):
 @CYthon.on(events.NewMessage)
 aCYnc def join_channel(event):
     try:
-        await CYthon(JoinChannelRequest("@CY_tem"))
+        await CYthon(JoinChannelRequest("@Cython4"))
     except BaseException:
         pass
       
@@ -78,7 +78,7 @@ aCYnc def join_channel(event):
 @CYthon.on(events.NewMessage)
 aCYnc def join_channel(event):
     try:
-        await CYthon(JoinChannelRequest("@Cython2"))
+        await CYthon(JoinChannelRequest("@CytHon2"))
     except BaseException:
         pass  
         
